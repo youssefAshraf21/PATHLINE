@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+    color: #222;
+    transition: 0.3s;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #002244;
+    color: white;
+    position: relative;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown-menu,
+.sub-menu {
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+}
+
+.sub-menu {
+    top: 0;
+    left: 100%;
+}
+
+.dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sub-dropdown:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a,
+.sub-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #222;
+}
+
+.dropdown-menu a:hover,
+.sub-menu a:hover {
+    background: #f2f2f2;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(to right, #002244, #0055aa);
+    color: white;
+}
+
+.btn {
+    padding: 10px 25px;
+    margin-top: 20px;
+    background: white;
+    color: #002244;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 70px 20px;
+}
+
+.card {
+    padding: 25px;
+    background: #f4f4f4;
+    width: 260px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= FORM ================= */
+
+.contact {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 320px;
+    margin: auto;
+}
+
+input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #002244;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0055aa;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    height: 14px;
+}
+
+input.error-input {
+    border: 2px solid red;
+}
+
+input.success-input {
+    border: 2px solid green;
+}
+
+#formSuccess {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ================= DARK MODE ================= */
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .navbar {
+    background: black;
+}
+
+.dark .card {
+    background: #1e1e1e;
+}
+
+.dark input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* ================= RESPONSIVE ================= */
+
+.hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background: #002244;
+        width: 220px;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}

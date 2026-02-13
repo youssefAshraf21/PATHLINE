@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chartwell Clone - Youssef</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">chartwell</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Services ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Executive Search</a></li>
+                <li><a href="#">Leadership Advisory</a></li>
+
+                <li class="sub-dropdown">
+                    <a href="#">Consulting ▸</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Strategy</a></li>
+                        <li><a href="#">Transformation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#">About</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div>
+        <button id="themeToggle">🌙</button>
+        <div class="hamburger">☰</div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Leadership. Strategy. Excellence.</h1>
+    <p>We help organizations build high-performance leadership teams.</p>
+    <button class="btn">Learn More</button>
+</section>
+
+<section class="features">
+    <div class="card">
+        <h3>Global Expertise</h3>
+        <p>Worldwide leadership solutions.</p>
+    </div>
+
+    <div class="card">
+        <h3>Trusted Advisors</h3>
+        <p>Decades of experience in executive search.</p>
+    </div>
+
+    <div class="card">
+        <h3>Data Driven</h3>
+        <p>Modern analytics for smart decisions.</p>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm" novalidate>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <small class="error" id="nameError"></small>
+
+        <input type="email" id="email" placeholder="Email Address">
+        <small class="error" id="emailError"></small>
+
+        <input type="password" id="password" placeholder="Password">
+        <small class="error" id="passwordError"></small>
+
+        <button type="submit">Submit</button>
+
+        <p id="formSuccess"></p>
+
+    </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
