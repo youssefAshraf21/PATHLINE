@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chartwell Clone - Youssef</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chartwell Partners | Executive Search & Leadership Advisory</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="logo">chartwell</div>
+    <div class="logo">chartwell<span class="logo-dot">✦</span></div>
 
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
@@ -18,12 +19,14 @@
             <ul class="dropdown-menu">
                 <li><a href="#">Executive Search</a></li>
                 <li><a href="#">Leadership Advisory</a></li>
+                <li><a href="#">Board Consulting</a></li>
 
                 <li class="sub-dropdown">
                     <a href="#">Consulting ▸</a>
                     <ul class="sub-menu">
                         <li><a href="#">Strategy</a></li>
                         <li><a href="#">Transformation</a></li>
+                        <li><a href="#">Culture & Performance</a></li>
                     </ul>
                 </li>
             </ul>
@@ -34,56 +37,82 @@
         <li><a href="#">Contact</a></li>
     </ul>
 
-    <div>
-        <button id="themeToggle">🌙</button>
+    <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn">🌙</button>
         <div class="hamburger">☰</div>
     </div>
 </nav>
 
 <section class="hero">
-    <h1>Leadership. Strategy. Excellence.</h1>
-    <p>We help organizations build high-performance leadership teams.</p>
-    <button class="btn">Learn More</button>
+    <div class="hero-content">
+        <span class="hero-tagline">Since 1998</span>
+        <h1>Building <span class="highlight">future-ready</span> leadership teams</h1>
+        <p>Trusted by Fortune 500 companies across North America, Europe, and Asia</p>
+        <button class="btn">Explore Our Approach →</button>
+    </div>
 </section>
 
 <section class="features">
     <div class="card">
-        <h3>Global Expertise</h3>
-        <p>Worldwide leadership solutions.</p>
+        <div class="card-icon">🌍</div>
+        <h3>Global Coverage</h3>
+        <p>Offices in 15 countries with local expertise and global reach</p>
+        <span class="card-stats">15+ Countries</span>
     </div>
 
     <div class="card">
-        <h3>Trusted Advisors</h3>
-        <p>Decades of experience in executive search.</p>
+        <div class="card-icon">🤝</div>
+        <h3>Senior Advisory</h3>
+        <p>Former CEOs and industry leaders as your dedicated search partners</p>
+        <span class="card-stats">25+ Years Experience</span>
     </div>
 
     <div class="card">
-        <h3>Data Driven</h3>
-        <p>Modern analytics for smart decisions.</p>
+        <div class="card-icon">📊</div>
+        <h3>Analytics-Led</h3>
+        <p>Proprietary assessment tools and real-time market intelligence</p>
+        <span class="card-stats">98% Retention Rate</span>
     </div>
 </section>
 
-<!-- ================= CONTACT FORM ================= -->
 <section class="contact">
-    <h2>Contact Us</h2>
+    <div class="contact-header">
+        <h2>Let's talk about your leadership needs</h2>
+        <p>Schedule a confidential consultation with our team</p>
+    </div>
 
     <form id="contactForm" novalidate>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Full name">
+            <small class="error" id="nameError"></small>
+        </div>
 
-        <input type="text" id="name" placeholder="Full Name">
-        <small class="error" id="nameError"></small>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email address">
+            <small class="error" id="emailError"></small>
+        </div>
 
-        <input type="email" id="email" placeholder="Email Address">
-        <small class="error" id="emailError"></small>
+        <div class="form-group">
+            <input type="password" id="password" placeholder="Password">
+            <small class="error" id="passwordError"></small>
+        </div>
 
-        <input type="password" id="password" placeholder="Password">
-        <small class="error" id="passwordError"></small>
-
-        <button type="submit">Submit</button>
-
-        <p id="formSuccess"></p>
-
+        <button type="submit" class="submit-btn">Send Message</button>
+        <p id="formSuccess" class="form-success"></p>
     </form>
 </section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">chartwell<span>✦</span></div>
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Careers</a>
+        </div>
+        <p class="copyright">© 2024 Chartwell Partners. All rights reserved.</p>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
